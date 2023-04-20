@@ -1,12 +1,15 @@
-<h1> DEMO PURE & IMPURE PIPE</h1>
+<h1> {{titlePage}}</h1>
 
 <h2> Quante volte viene ricalcolata la pipe?</h2>
+<input type="text" #p>&nbsp;
+<button (click)="changeTitlePage(p.value)">Modifico Titolo Pagina</button>
+<br><br>
 <input type="text" #i>&nbsp;
-<button (click)="changeTitle(i.value)">Modifico Titolo</button>
+<button (click)="changeTitle(i.value)">Modifico Testo Legato alle pipe</button>
 
-<p>PURE: {{ title | customPipePure }}</p>
+<p>PURE:  {{title}} - {{ title | customPipePure }}</p>
 
-<p>IMPURE: {{ title | customPipeImpure }}</p>
+<p>IMPURE: {{title}} - {{ title | customPipeImpure }}</p>
 
 
 <h2> Cosa succede ad una lista filtrata da una pipe che viene modificata By Reference o By Value?</h2>

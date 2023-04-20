@@ -8,12 +8,17 @@ import { BOOK_INIT_VALUES, Book } from './models/book.model';
 })
 export class AppComponent {
 
-  public title = 'pipe-pure';
+  public title = 'numero di esecuzioni';
+  public titlePage = 'DEMO PURE & IMPURE PIPE';
   public list: Book[] = deepCopy(BOOK_INIT_VALUES);
   public searchTerm = '';
 
   public changeTitle(text: string) {
     this.title = text;
+  }
+
+  public changeTitlePage(text: string) {
+    this.titlePage = text;
   }
 
   public changeByReference() {
