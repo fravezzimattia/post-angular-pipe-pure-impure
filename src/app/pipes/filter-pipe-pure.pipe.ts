@@ -6,10 +6,7 @@ import { Book } from '../models/book.model';
   pure: true
 })
 export class FilterPipePurePipe implements PipeTransform {
-  counter = 0;
-
   transform(books: Book[], searchTerm: string): Book[] {
-    ++this.counter;
     if (!searchTerm) {
       return books;
     }
@@ -17,9 +14,6 @@ export class FilterPipePurePipe implements PipeTransform {
       book => book.title
         .toLowerCase()
         .indexOf(searchTerm.toLowerCase()) !== -1
-    ).map(book => {
-      book.pipeCounter = this.counter
-      return book;
-    });
+    );
   }
 }

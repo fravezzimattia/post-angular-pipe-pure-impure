@@ -19,15 +19,17 @@ export class AppComponent {
   public changeByReference() {
     const ref: Book[] = deepCopy(this.list);
     ref[0].title = "quarto libro";
+    ref[0].imei = "4444-4444-4444";
     this.list = ref;
   }
 
   public changeByValue() {
     this.list[0].title = "quarto libro";
+    this.list[0].imei = "4444-4444-4444";
   }
 
   public pushInArray() {
-    this.list.push({ title: "primo libro 2", imei: "1234-1234-1234", pipeCounter: 0 });
+    this.list.push({ title: "primo libro 2", imei: "9999-9999-9999"});
   }
 
   public reset() {

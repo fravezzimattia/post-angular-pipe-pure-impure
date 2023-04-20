@@ -27,13 +27,13 @@
 <p>PURE: </p>
 <ul>
     <li *ngFor="let item of list | filterPipePure:searchTerm">
-        {{item.title}} - {{item.pipeCounter}}
+        {{item.title}} - {{item.imei}}
     </li>
 </ul>
 
 <p>IMPURE: </p>
 <ul>
     <li *ngFor="let item of list | filterPipeImpure:searchTerm">
-        {{item.title}} - {{item.pipeCounter}}
+        {{item.title}} - {{item.imei}}
     </li>
 </ul>
