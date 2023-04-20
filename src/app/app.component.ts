@@ -26,6 +26,10 @@ export class AppComponent {
     this.list[0].title = "quarto libro";
   }
 
+  public pushInArray() {
+    this.list.push({ title: "primo libro 2", imei: "1234-1234-1234", pipeCounter: 0 });
+  }
+
   public reset() {
     this.list = deepCopy(BOOK_INIT_VALUES);
   }

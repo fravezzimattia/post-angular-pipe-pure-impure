@@ -12,13 +12,16 @@
 <h2> Cosa succede ad una lista filtrata da una pipe che viene modificata By Reference o By Value?</h2>
 <ul>
     <li>Inserisco in "filtro lista" il testo "primo" </li>
-    <li>Click su uno dei due pulsanti a destra nell'input</li>
+    <li>Click su uno dei tre pulsanti a destra nell'input</li>
     <li>Click sul pulsante Reset</li>
-    <li>Click sull'altro pulsante della lista</li>
+    <li>Click su un altro pulsante</li>
+    <li>Click sul pulsante Reset</li>
+    <li>Click sull'ultimo pulsante</li>
 </ul>
 <input type="text" [(ngModel)]="searchTerm" placeholder="Filtro Lista">&nbsp;
 <button (click)="changeByReference()">Modifico primo valore By Reference</button> &nbsp;
 <button (click)="changeByValue()">Modifico primo valore By Value</button>&nbsp;
+<button (click)="pushInArray()">Inserisco un nuovo libro "primo libro 2"</button>&nbsp;
 <button (click)="reset()">Reset</button>
 
 <p>PURE: </p>
